@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # use devise for authentication
 gem 'devise'
+# Use NewsAPI.org for getting news
+gem 'news-api'
 # use omniauth-github for authentication via github oauth2
 gem 'omniauth-github'
 # Use CoffeeScript for .coffee assets and views
