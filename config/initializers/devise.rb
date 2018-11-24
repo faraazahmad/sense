@@ -113,6 +113,9 @@ Devise.setup do |config|
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 11
 
+  # add omniauth config
+  config.omniauth :github, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], :scope => 'user:email'
+
   # Set up a pepper to generate the hashed password.
   # config.pepper = '1f562f95d8a425284f2d2372755d34af4945ad1b903224422a4d4407435259f9b7db8abf8bab199fde316b95f28b551564b7f86bccf79a174646fc50a24ec287'
 
