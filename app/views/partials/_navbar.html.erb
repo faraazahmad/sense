@@ -1,1 +1,60 @@
-<nav class="navbar"></nav>
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <%= link_to image_tag("https://bulma.io/images/bulma-logo.png"), root_path, class: 'navbar-item' %>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Home", root_path, class: 'navbar-item' %>
+      <%= link_to "Headlines", article_headlines_path, class: 'navbar-item' %>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+          Docs
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+            Overview
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+            Modifiers
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+            Columns
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+            Layout
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+            Form
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+            Elements
+          </a>
+          <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+            Components
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+            <% if user_signed_in? %>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'button is-primary' %>
+                <%= link_to "Edit Profile", edit_user_registration_path, class: 'button is-light' %>
+            <% else %>
+                <%= link_to "Sign up", new_user_registration_path, class: 'button is-primary' %>
+                <%= link_to "Log in", new_user_session_path, class: 'button is-light' %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
