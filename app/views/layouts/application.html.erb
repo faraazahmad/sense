@@ -11,8 +11,8 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="notification is-warning" id="flash-alert"><%= alert %></p>
+    <p class="notification is-primary" id="flash-notice"><%= notice %></p>
 
     <%= render "partials/navbar"%>
     <%= yield %>

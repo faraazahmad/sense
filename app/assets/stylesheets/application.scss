@@ -14,4 +14,24 @@
  *= require_self
  */
 
- @import "bulma";
+
+@import "bulma";
+
+.notification {
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    animation: fadeOut 0.5s forwards ease-out 2.5s 1;
+
+    &:empty {
+        display: none;
+    }
+}
+
+#flash-alert {
+    left: 1.5rem;
+}
+
+#flash-notice {
+    right: 1.5rem;
+}
