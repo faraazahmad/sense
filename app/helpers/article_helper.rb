@@ -1,7 +1,7 @@
 require 'news-api'
 
 module ArticleHelper
-    def getFive(order)
+    def get_five(order)
         x = 5 * order
         @headlines[x..x+4]
     end
