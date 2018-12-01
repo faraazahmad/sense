@@ -1,8 +1,8 @@
 <h1 class="title">Headlines</h1>
-<div>
-    <% 4.times do |index| %>
+<div class="container">
+    <% 5.times do |index| %>
         <div class="columns news">
-            <% get_five(index).each do |article| %>
+            <% get_four(index).each do |article| %>
                 <div class="column">
                     <div class="card">
                         <% if article.urlToImage %>
