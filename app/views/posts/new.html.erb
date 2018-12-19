@@ -24,8 +24,10 @@
           </div>
           
           <div class="field">
-            <%= f.label :tags %>
-            <%= f.text_field :tags %>
+            <%= f.label :tags, class: "label" %>
+            <div class="control">
+              <%= f.text_field :tags, class: "input" %>
+            </div>
           </div>
         <% end %>
       </div>
