@@ -4,8 +4,16 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post.user = current_user
-    @post.create(post_params)
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
+
+    if @post.save
+      flash[:notice] = "Article succesfully submitted"
+      redirect_to article_headlines_path
+    else
+      flash[:alert] = "There was an error submitting the article"
+      render :new
+    end
   end
 
   def edit
