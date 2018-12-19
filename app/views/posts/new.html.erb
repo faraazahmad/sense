@@ -1,6 +1,6 @@
 <div class="container">
   <br>
-  <div class="card">
+  <div class="card small-width">
     <header class="card-header">
       <p class="card-header-title">
         Submit new article
@@ -38,13 +38,13 @@
           </div>
 
 
-        <% end %>
       </div>
     </div>
     <footer class="card-footer">
-      <a href="#" class="card-footer-item">Save</a>
-      <a href="#" class="card-footer-item">Edit</a>
-      <a href="#" class="card-footer-item">Delete</a>
+      <%= f.submit "Create Post", class: "card-footer-item" %>
+
+    <% end %>
+      <%= link_to "Cancel", article_headlines_path, class: "card-footer-item" %>
     </footer>
   </div>
 </div>
