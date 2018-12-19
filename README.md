@@ -1,6 +1,7 @@
 # Sense
 
-Community powered fake news checker
+Community powered fake news checker <br>
+*Color palette used: https://www.color-hex.com/color-palette/69731*
 
 ## Goals
 
