@@ -47,6 +47,7 @@
       <div class="navbar-item">
         <div class="buttons">
             <% if user_signed_in? %>
+                <%= link_to "New Post", new_post_path, class: 'button is-warning' %>
                 <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'button is-info' %>
                 <%= link_to "Edit Profile", edit_user_registration_path, class: 'button is-light' %>
             <% else %>
