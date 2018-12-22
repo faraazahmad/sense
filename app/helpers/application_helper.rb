@@ -1,5 +1,6 @@
 module ApplicationHelper
     def all_articles
+        # TODO: get only posts which are at most 6 hours old
         posts = Post.all
         articles = from_api()
 
@@ -7,6 +8,6 @@ module ApplicationHelper
         result << posts
         result << articles
 
-        return result.shuffle!
+        return result.shuffle
     end
 end

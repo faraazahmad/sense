@@ -1,9 +1,18 @@
+<% articles = all_articles() %>
+
 <div class="container">
     <br>
     <h1 class="title">Headlines</h1>
     <h2 class="subtitle">All your current news</h2>
     <br>
-    <% all_articles.each do |article| %>
+    <% articles.each do |article| %>
         <%= article %>
     <% end %>
+
+    <div class="columns">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
 </div>
