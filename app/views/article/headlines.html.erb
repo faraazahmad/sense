@@ -1,37 +1,9 @@
-<h1 class="title">Headlines</h1>
-
 <div class="container">
-    <div class="columns">
-        <% 4.times do |index| %>
-            <div class="column">
-                <% get_five(index).each do |article| %>
-                    <div class="card">
-                        <% if article.urlToImage %>
-                            <div class="card-image">
-                                <figure class="image is-3by2">
-                                    <%= image_tag(article.urlToImage) %>
-                                </figure>
-                            </div>
-                        <% end %>
-
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="subtitle is-4"><%= link_to article.title, article.url %></p>
-                                    <p class="subtitle is-6"><%= article.description %></p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                <p><%= article.name %></p>
-
-                                <time datetime="2016-1-1"><%= time_ago_in_words(article.publishedAt) %> ago.</time>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                <% end %>
-            </div>        
-        <% end %>
-    </div>
+    <br>
+    <h1 class="title">Headlines</h1>
+    <h2 class="subtitle">All your current news</h2>
+    <br>
+    <% all_articles.each do |article| %>
+        <%= article %>
+    <% end %>
 </div>
