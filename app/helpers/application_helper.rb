@@ -6,7 +6,9 @@ module ApplicationHelper
 
         result = []
         result << posts
-        result << articles
+        articles.each do |a|
+            result << a
+        end
 
         return result.shuffle
     end
