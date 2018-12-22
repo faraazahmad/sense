@@ -1,18 +1,14 @@
-<% articles = all_articles() %>
-
 <div class="container">
     <br>
     <h1 class="title">Headlines</h1>
     <h2 class="subtitle">All your current news</h2>
     <br>
-    <% articles.each do |article| %>
-        <%= article %>
-    <% end %>
-
-    <div class="columns">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-    </div>
+    
+    <section id="news-top">
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column is-two-fifths"></div>
+        </div>
+    </section>
+    <section id="news-bottom"></section>
 </div>
