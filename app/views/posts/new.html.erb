@@ -41,7 +41,7 @@
       </div>
     </div>
     <footer class="card-footer">
-      <%= f.submit "Create Post", class: "card-footer-item" %>
+      <%= f.submit "Create Post", class: "card-footer-item", method: :create %>
 
     <% end %>
       <%= link_to "Cancel", article_headlines_path, class: "card-footer-item" %>
