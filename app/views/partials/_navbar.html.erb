@@ -1,4 +1,4 @@
-<nav class="navbar is-link is-transparent">
+<nav class="navbar is-dark is-transparent">
   <div class="navbar-brand">
     <%= link_to "SENSE", root_path, class: 'navbar-item' %>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -51,8 +51,8 @@
                 <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'button is-info' %>
                 <%= link_to "Edit Profile", edit_user_registration_path, class: 'button is-light' %>
             <% else %>
-                <%= link_to "Sign up", new_user_registration_path, class: 'button is-info' %>
-                <%= link_to "Log in", new_user_session_path, class: 'button is-light' %>
+                <%= link_to "Sign up", new_user_registration_path, class: 'button is-link' %>
+                <%= link_to "Log in", new_user_session_path, class: 'button is-primary' %>
             <% end %>
         </div>
       </div>

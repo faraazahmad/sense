@@ -15,6 +15,17 @@
  */
 
 
+// define all bulma variables
+$brand-dark: #2d0c03;
+$brand-brown: #98514b;
+$brand-cream: #f8b786;
+$brand-red: #ff1a4a;
+$brand-light: #f4f6ec;
+
+$primary: $brand-red;
+$link: $brand-red;
+$dark: $brand-dark;
+
 @import "bulma";
 
 .notification {
