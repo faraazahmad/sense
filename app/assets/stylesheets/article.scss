@@ -21,3 +21,15 @@
         margin-left: 3em;
     }
 }
+
+#news-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+    .card {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}

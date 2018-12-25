@@ -50,6 +50,8 @@
   
   <section id="news-bottom">
   <!-- Three column layout -->
-  <%= render partial: "partials/article_card", locals: { post: rest.first } %>
+  <% rest.each do |p| %>
+    <%= render partial: "partials/article_card", locals: { post: p } %>
+  <% end %>
   </section>
 </div>
