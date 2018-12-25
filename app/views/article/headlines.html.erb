@@ -1,7 +1,7 @@
 <% 
   news = from_api()
-  first_six = news[0..5]
-  rest = news[6..19]
+  top = news[0..1]
+  rest = news[2..news.length]
 %>
 
 <div class="container">
@@ -17,22 +17,22 @@
           <div class="tile is-parent">
             <div class="news tile is-child box">
               <div class="news-image">
-                <%= image_tag(first_six[0].urlToImage) %>
+                <%= image_tag(top[0].urlToImage) %>
               </div>
               
-              <p class="title"><%= link_to first_six[0].title, first_six[0].url %></p>
-              <p class="description subtitle"><%= first_six[0].description %></p>
+              <p class="title"><%= link_to top[0].title, top[0].url %></p>
+              <p class="description"><%= top[0].description %></p>
             </div>
           </div>
 
           <div class="small-news tile is-4 is-vertical is-parent">
             <div class="news tile is-child box">
               <div class="news-image">
-                <%= image_tag(first_six[1].urlToImage) %>
+                <%= image_tag(top[1].urlToImage) %>
               </div>
               
-              <p class="subtitle"><%= link_to first_six[1].title, first_six[1].url %></p>
-              <p class="description"><%= truncate first_six[1].description, length: 130 %></p>
+              <p class="subtitle"><%= link_to top[1].title, top[1].url %></p>
+              <p class="description"><%= truncate top[1].description, length: 130 %></p>
             </div>
           </div>
         </div>
@@ -48,5 +48,11 @@
     </div>
   </section>
   
-  <section id="news-bottom"></section>
+  <section id="news-bottom">
+    <% rest.each do |p| %>
+      <h1 class="title"><%= p.title %></h1>
+      <p><%= p.description %></p>
+      <br>
+    <% end %>
+  </section>
 </div>
