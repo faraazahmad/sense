@@ -49,10 +49,7 @@
   </section>
   
   <section id="news-bottom">
-    <% rest.each do |p| %>
-      <h1 class="title"><%= p.title %></h1>
-      <p><%= p.description %></p>
-      <br>
-    <% end %>
+  <!-- Three column layout -->
+  <%= render partial: "partials/article_card", locals: { post: rest.first } %>
   </section>
 </div>
