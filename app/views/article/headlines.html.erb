@@ -15,24 +15,24 @@
       <div class="column">
         <div class="tile is-ancestor">
           <div class="tile is-parent">
-            <div class="tile is-child box">
+            <div class="news tile is-child box">
               <div class="news-image">
                 <%= image_tag(first_six[0].urlToImage) %>
               </div>
               
               <p class="title"><%= first_six[0].title %></p>
-              <p><%= first_six[0].description %></p>
+              <p class="description subtitle"><%= first_six[0].description %></p>
             </div>
           </div>
 
           <div class="small-news tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
+            <div class="news tile is-child box">
               <div class="news-image">
                 <%= image_tag(first_six[1].urlToImage) %>
               </div>
               
               <p class="subtitle"><%= truncate first_six[1].title, length: 60 %></p>
-              <p><%= truncate first_six[1].description, length: 100 %></p>
+              <p class="description"><%= truncate first_six[1].description, length: 100 %></p>
             </div>
             <div class="tile is-child box">
               <div class="news-image">
@@ -40,7 +40,7 @@
               </div>
               
               <p class="subtitle"><%= truncate first_six[2].title, length: 60 %></p>
-              <p><%= truncate first_six[2].description, length: 100 %></p>
+              <p class="description"><%= truncate first_six[2].description, length: 100 %></p>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@
         </div>
       </div>
 
-      <div class="column is-one-fifth">
+      <div class="column posts is-one-fifth">
         <% current_posts.each do |p| %>
           <strong><%= p.title %><strong><br>
           <p><%= p.description %></p>
