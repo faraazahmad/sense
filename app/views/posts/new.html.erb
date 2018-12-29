@@ -8,7 +8,7 @@
     </header>
     <div class="card-content">
       <div class="content">
-        <%= form_for @post do |f| %>
+        <%= form_for(@post, :url => { :action => 'create' }) do |f| %>
           <div class="field">
             <%= f.label :title, class: "label" %>
             <div class="control">
@@ -41,7 +41,7 @@
       </div>
     </div>
     <footer class="card-footer">
-      <%= f.submit "Create Post", class: "card-footer-item", method: :create %>
+      <%= f.submit "Create Post", class: "card-footer-item" %>
 
     <% end %>
       <%= link_to "Cancel", article_headlines_path, class: "card-footer-item" %>
