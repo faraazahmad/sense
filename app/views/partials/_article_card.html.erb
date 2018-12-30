@@ -17,9 +17,7 @@
     <div class="content has-text-weight-normal">
       <%= post.description %>
     </div>
+    <i class="has-text-grey"><%= time_ago_in_words(post.publishedAt) %> ago</i>
   </div>
 
-  <footer class="has-text-weight-normal card-footer">
-    <i class=" card-footer-item has-text-grey"><%= time_ago_in_words(post.publishedAt) %> ago</i>
-  </footer>
 </div>

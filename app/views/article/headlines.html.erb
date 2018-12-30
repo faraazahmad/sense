@@ -16,6 +16,7 @@
     <div class="columns">
       <div class="column">
         <div class="tile is-ancestor">
+
           <div class="tile is-parent">
             <div class="news tile is-child box">
               <div class="news-image">
@@ -37,18 +38,20 @@
               <p class="description"><%= truncate top[1].description, length: 130 %></p>
             </div>
           </div>
+
         </div>
       </div>
 
       <div class="column posts is-one-fifth">
         <% current_posts.each do |p| %>
-          <strong><%= p.title %><strong><br>
+          <p class="subtitle"><%= p.title %></p>
           <p><%= p.description %></p>
-          <hr>
+          <hr/>
         <% end %>
       </div>
     </div>
   </section>
+  <br>
   
   <section id="news-bottom">
   <!-- Three column layout -->

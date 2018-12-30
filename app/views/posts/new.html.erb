@@ -8,7 +8,7 @@
     </header>
     <div class="card-content">
       <div class="content">
-        <%= form_for(@post, :url => { :action => 'create' }) do |f| %>
+        <%= form_for(@post, :url => { :action => :create }) do |f| %>
           <div class="field">
             <%= f.label :title, class: "label" %>
             <div class="control">
