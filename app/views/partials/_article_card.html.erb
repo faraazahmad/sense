@@ -9,7 +9,9 @@
   <div class="card-content">
     <div class="media">
       <div class="media-content">
-        <p class="title is-4"><%= post.title %></p>
+        <p class="title is-4">
+          <a href="<%= post.url %>"><%= post.title %></a>
+        </p>
         <p class="subtitle is-6"><%= post.author %></p>
       </div>
     </div>
