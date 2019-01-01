@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :auth_user, only: [:new, :create, :edit, :update]
+
   def new
     @post = Post.new
   end
@@ -39,5 +41,12 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:title, :url, :description, :tags)
+    end
+
+    def auth_user
+      unless user_signed_in?
+        flash[:alert] = "Please sign in first."
+        redirect_to new_user_session_path
+      end
     end
 end

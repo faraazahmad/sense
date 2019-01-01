@@ -12,4 +12,9 @@ module ApplicationHelper
 
         return result.shuffle
     end
+
+    def user_signed_in?
+        # returns true if user is signed in
+        return current_user != nil
+    end
 end
